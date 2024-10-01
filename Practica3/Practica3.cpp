@@ -28,8 +28,7 @@ int main(int argc, char* argv[]) {
         if (rank == RANK_MAESTRO) {
             printf("El número de procesos debe ser igual al tamaño del vector (%d).\n", TAM_VECTOR);
         }
-        MPI_Finalize();
-        return -1;
+		MPI_Abort(MPI_COMM_WORLD, 1);
     }
 
     int A[TAM_VECTOR], B[TAM_VECTOR];
