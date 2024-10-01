@@ -73,13 +73,6 @@ int main(int argc, char* argv[]) {
 		printf("Tiempo de ejecución: %f\n", endTime - startTime);
     }
 
-	// Sincronizar los procesos
-	MPI_Barrier(MPI_COMM_WORLD);
-
-	// Liberar memoria
-	free(A);
-	free(B);
-
     MPI_Finalize();
     return 0;
 }
